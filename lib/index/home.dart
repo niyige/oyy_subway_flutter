@@ -3,6 +3,7 @@ import '../me/mine.dart';
 import 'indexPage.dart';
 import '../notice/notice.dart';
 import '../site/site.dart';
+import 'package:flutter_wechat/flutter_wechat.dart';
 
 //项目首页
 class Home extends StatefulWidget {
@@ -27,7 +28,7 @@ class _HomePageState extends State<Home> {
 
     _item = <BottomNavigationBarItem>[
       new BottomNavigationBarItem(
-          icon: new Icon(Icons.directions_railway ), title: new Text("出行")),
+          icon: new Icon(Icons.directions_railway), title: new Text("出行")),
       new BottomNavigationBarItem(
           icon: new Icon(Icons.departure_board), title: new Text("站点")),
       new BottomNavigationBarItem(
@@ -44,6 +45,9 @@ class _HomePageState extends State<Home> {
     ];
 
     _currentPage = _pages[_currentIndex];
+
+    // 微信注册需要在你需要的地方注册，最好是app首页
+    FlutterWechat.registerWechat("wx7e2d791ff79cdbd9");
   }
 
   @override

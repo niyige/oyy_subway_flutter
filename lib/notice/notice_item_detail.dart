@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:oyy_subway_flutter/config.dart';
 import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
+import 'package:flutter_wechat/flutter_wechat.dart';
 
 class NoticeItemDetail extends StatefulWidget {
   @override
@@ -27,7 +28,6 @@ class NoticeItemDetailState extends State<NoticeItemDetail> {
                 color: Colors.white,
               )),
           new Expanded(
-
               child: Container(
             child: new Text("公告详情"),
           )),
@@ -58,13 +58,18 @@ class NoticeItemDetailState extends State<NoticeItemDetail> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   new Container(
-                    child: new Text("分享"),
-
-                  ),
+//                    child: new Text("分享"),
+                      child: new FlatButton(
+                          onPressed: () {
+                            FlutterWechat.shareText(
+                              text: "test",
+                              type: 0,
+                            ); //文字分享 type 0 聊天页面 1 朋友圈
+                          },
+                          child: new Text("分享"))),
                 ],
               ),
             )
-
           ],
         ),
         url: 'https://www.baidu.com/',

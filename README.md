@@ -9,6 +9,23 @@ flutter_webview_plugin: "^0.1.6"   ——>相当于webview的一个package。
 
 用法：参考该项目 notice_item_detail.dart 页面
 
+##version——1.0.1  增加了微信分享
+
+使用到的flutter packages：<Br/>
+<Br/>
+flutter_wechat: "^0.1.5"
+
+<Br/>
+效果图（动态图太大了，12M的gif（mp4转）<Br/>
+有没有好用打的MP4转gif在线生成工具，求推荐）
+<Br/>
+
+![image](https://github.com/niyige/oyy_subway_flutter/blob/master/screenshots/wx_share.gif)<Br/>
+
+
+
+##version——1.0.0
+
 ## 使用到的组件
 bottomNavigationBar：首页底部栏<Br/>
 DefaultTabController：切卡栏<Br/>
